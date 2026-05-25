@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Quack-Click</title>
 </head>
     <body>
@@ -28,27 +29,5 @@
 
             <div class="food"></div>
         </div>
-
-        <script>
-            let clicks = 0;
-            let clicksThisSecond = 0;
-
-            const duckBtn = document.getElementById('duckBtn');
-            const totalClicksEl = document.getElementById('totalClicks');
-            const cpsEl = document.getElementById('cps');
-
-            // CLICK
-            duckBtn.addEventListener('click', () => {
-                clicks++;
-                clicksThisSecond++;
-
-                totalClicksEl.textContent = clicks.toString().padStart(4, '0');
-            });
-
-            setInterval(() => {
-                cpsEl.textContent = clicksThisSecond;
-                clicksThisSecond = 0;
-            }, 1000);
-        </script>
     </body>
 </html>
