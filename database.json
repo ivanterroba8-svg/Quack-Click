@@ -1,10 +1,62 @@
 {
-    "partida": {
-        "version": 1.0,
-        "guardado": "12/2/2026",
-        "clicks_totales": 1222,
-        "numero de bufos usado": 6
-
-
+  "jugador": {
+    "version": 1.0,
+    "clicks_totales": 0,
+    "clicks_ps": 0
+  },
+  "bufos": [
+    { "numero_bufo": 1 },
+    { "numero_bufo": 1},
+    { "numero_bufo": 1}
+  ],
+"patos": [
+    { "nombre_pato": "pato amarillo" },
+    { "nombre_pato": "pato marrón" },
+    { "nombre_pato": "pato blanco" }
+  ],
+  "jefes":[
+    {"nombre_jefe": "Coronell Sanders", "nivel_del_jefe": 5, "numero_jefe": 3},
+    {"nombre_jefe": "Pablo motos", "nivel_del_jefe":10, "numero_jefe": 1},
+    {"nombre_jefe":"Marco Gil", "nivel_del_jefe":2, "numero_jefe":2}
+  ],
+  "zonas": [
+    {
+      "numero_zona": "1",
+      "tipo_de_zona": "pacífica",
+      "numero_jefe":1
+    },
+    {
+      "numero_zona": "2",
+      "tipo_de_zona": "agitada",
+      "numero_jefe":2
+    },
+    {
+      "numero_zona": "3",
+      "tipo_de_zona": "caos",
+      "numero_jefe":3
     }
+  ]
 }
+
+
+/*
+    "patos": [
+    { 
+        "id": "pato_comun", 
+        "nombre": "Pato normal", 
+        "rareza": "comun", 
+        "probabilidad": 70 
+    },
+    { 
+        "id": "pato_épico", 
+        "nombre": "Pato marrón", 
+        "rareza": "raro", 
+        "probabilidad": 25 
+    },
+    { 
+        "id": "pato_dorado", 
+        "nombre": "Pato negro", 
+        "rareza": "legendario", 
+        "probabilidad": 5 
+    }
+    ],*/
