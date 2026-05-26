@@ -133,7 +133,7 @@ function resetGame() {
         "Se perderá todo:\n" +
         `• ${clicks} clicks acumulados\n` +
         `• ${clicksPorSegundo} CPS\n` +
-        `• ${lagosComprados} lagos, ${pantanosComprados} pantanos, ${riosComprados} ríos\n\n` +
+        `• ${lagosComprados} lagos, ${pantanosComprados} pantanos, ${riosComprados} ríos, ${humedalesComprados} humedales\n\n` +
         "Esta acción no se puede deshacer."
     );
 
