@@ -129,7 +129,7 @@ function comprarCPS(cantidad) {
 
 function resetGame() {
     const confirmado = confirm(
-        "⚠️ ¿Seguro que quieres resetear la partida?\n\n" +
+        "¿Seguro que quieres resetear la partida?\n\n" +
         "Se perderá todo:\n" +
         `• ${clicks} clicks acumulados\n` +
         `• ${clicksPorSegundo} CPS\n` +
@@ -147,6 +147,7 @@ function resetGame() {
     precioLago = 100;
     precioPantano = 500;
     precioRios = 1000;
+    precioHumedales = 2500;
 
     localStorage.clear();
 
@@ -154,5 +155,5 @@ function resetGame() {
     cps.textContent = clicksPorSegundo;
     actualizarBotones();
 
-    alert("✅ Partida reseteada. ¡A empezar desde cero, pato!");
+    alert("Partida reseteada. ¡A empezar desde cero, pato!");
 }
