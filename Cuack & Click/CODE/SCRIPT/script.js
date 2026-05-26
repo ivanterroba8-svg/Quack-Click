@@ -32,6 +32,20 @@ function comprarLago()
     localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
 }
 
+function comprarPantano() 
+{
+    clicksPorSegundo += 5;
+    cps.textContent = clicksPorSegundo;
+    localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
+}
+
+function comprarRios() 
+{
+    clicksPorSegundo += 10;
+    cps.textContent = clicksPorSegundo;
+    localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
+}
+
 function comprarCPS(cantidad) 
 {
     clicksPorSegundo += cantidad;
