@@ -35,6 +35,7 @@ boton.addEventListener("click", () => {
     totalClicks.textContent = clicks;
     localStorage.setItem("clicks", clicks);
     localStorage.setItem("clicksPorClick", clicksPorClick);
+    soundCuack();
 });
 
 setInterval(() => {
@@ -61,6 +62,7 @@ function comprarLago() {
         localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
 
         actualizarBotones();
+        soundCoind();
     }
 }
 
@@ -80,6 +82,7 @@ function comprarPantano() {
         localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
 
         actualizarBotones();
+        soundCoind();
     }
 }
 
@@ -99,6 +102,7 @@ function comprarRios() {
         localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
 
         actualizarBotones();
+        soundCoind();
     }
 }
 
@@ -118,6 +122,7 @@ function comprarHumedales() {
         localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
 
         actualizarBotones();
+        soundCoind();
     }
 }
 
@@ -156,4 +161,16 @@ function resetGame() {
     actualizarBotones();
 
     alert("Partida reseteada. ¡A empezar desde cero, pato!");
+}
+
+function soundCuack() 
+{
+    const audio = new Audio('../ASSETS/cuack.mp3');
+    audio.play();
+}
+
+function soundCoind()
+{
+    const audio = new Audio('../ASSETS/coin.mp3');
+    audio.play();
 }

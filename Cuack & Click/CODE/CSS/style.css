@@ -111,24 +111,8 @@ header h1 {
     box-shadow: var(--sombra-roja), inset 0 0 30px rgba(200,0,0,0.1);
 
     padding: 30px 34px;
-
-    transition: transform 0.2s ease;
 }
 
-.cuacks::before {
-    content: '';
-    position: absolute;
-    top: -1.5px;
-    left: -1.5px;
-    width: 14px;
-    height: 14px;
-    background: var(--dorado-dim);
-    border-radius: 3px 0 0 0;
-}
-
-.cuacks:hover {
-    transform: scale(1.02);
-}
 
 .cuacks h2 {
     font-size: 0.85rem;
@@ -267,7 +251,6 @@ header h1 {
 .buff-boton:hover {
     background: rgba(50, 120, 50, 0.7);
     border-color: rgba(100, 200, 100, 0.35);
-    transform: translateX(4px);
 }
 
 .buff-boton:active {
