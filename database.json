@@ -6,8 +6,8 @@
   },
   "bufos": [
     { "numero_bufo": 1 },
-    { "numero_bufo": 1},
-    { "numero_bufo": 1}
+    { "numero_bufo": 2},
+    { "numero_bufo": 3}
   ],
 "patos": [
     { "nombre_pato": "pato amarillo" },
@@ -15,9 +15,9 @@
     { "nombre_pato": "pato blanco" }
   ],
   "jefes":[
-    {"nombre_jefe": "Coronell Sanders", "nivel_del_jefe": 5, "numero_jefe": 3},
-    {"nombre_jefe": "Pablo motos", "nivel_del_jefe":10, "numero_jefe": 1},
-    {"nombre_jefe":"Marco Gil", "nivel_del_jefe":2, "numero_jefe":2}
+    {"nombre_jefe": "Coronell Sanders", "numero_jefe": 3},
+    {"nombre_jefe": "Pablo motos", "numero_jefe": 1},
+    {"nombre_jefe":"Marco Gil", "numero_jefe":2}
   ],
   "zonas": [
     {
@@ -37,26 +37,3 @@
     }
   ]
 }
-
-
-/*
-    "patos": [
-    { 
-        "id": "pato_comun", 
-        "nombre": "Pato normal", 
-        "rareza": "comun", 
-        "probabilidad": 70 
-    },
-    { 
-        "id": "pato_épico", 
-        "nombre": "Pato marrón", 
-        "rareza": "raro", 
-        "probabilidad": 25 
-    },
-    { 
-        "id": "pato_dorado", 
-        "nombre": "Pato negro", 
-        "rareza": "legendario", 
-        "probabilidad": 5 
-    }
-    ],*/
