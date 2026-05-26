@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="SCRIPT/script.js" defer></script>
     <title>Quack-Click</title>
 </head>
     <body>
@@ -27,9 +27,9 @@
 
             <div class="buff">
                 <h2>Buffs:</h2>
-                <button class="buff-boton" onclick="comprarLago()">Comprar Lago (1 click por segundo)</button>
-                <button class="buff-boton" onclick="comprarPantano()">Comprar Pantano (5 clicks por segundo)</button>
-                <button class="buff-boton" onclick="comprarRios()">Comprar Ríos (10 clicks por segundo)</button>
+                <button class="buff-boton" id="btnLago" onclick="comprarLago()">Comprar Lago (1 CPS) — Precio: 100</button>
+                <button class="buff-boton" id="btnPantano" onclick="comprarPantano()">Comprar Pantano (5 CPS) — Precio: 500</button>
+                <button class="buff-boton" id="btnRios" onclick="comprarRios()">Comprar Ríos (10 CPS) — Precio: 1000</button>
             </div>
 
             <div class="food"></div>
