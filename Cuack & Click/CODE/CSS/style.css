@@ -63,8 +63,16 @@ header h1 {
     border: 1.5px solid var(--granate-borde);
     border-radius: 4px 16px 16px 16px;
     box-shadow: var(--sombra-roja), inset 0 0 30px rgba(200,0,0,0.1);
+<<<<<<< HEAD
     padding: 24px 28px;
 }
+=======
+
+    padding: 30px 34px;
+}
+
+
+>>>>>>> 626ad0365b9c211e912c3f3d5dabebe61897286c
 .cuacks h2 {
     font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
     color: rgba(255,255,255,0.45); margin-bottom: 4px; margin-top: 14px;
@@ -176,7 +184,21 @@ header h1 {
     background: linear-gradient(90deg, rgba(180,60,60,0.5), rgba(220,80,80,0.6));
 }
 
+<<<<<<< HEAD
 /* ── BOTÓN PATO ── */
+=======
+.buff-boton:hover {
+    background: rgba(50, 120, 50, 0.7);
+    border-color: rgba(100, 200, 100, 0.35);
+}
+
+.buff-boton:active {
+    transform: scale(0.97);
+}
+
+/* BOTÓN PATO */
+
+>>>>>>> 626ad0365b9c211e912c3f3d5dabebe61897286c
 .clicker {
     width: 220px; height: 220px;
     border-radius: 50%; border: 3px solid rgba(255,210,0,0.3);

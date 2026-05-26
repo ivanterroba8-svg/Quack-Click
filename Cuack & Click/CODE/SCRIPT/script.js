@@ -22,11 +22,29 @@ const UPGRADES = [
     { id: "golden",    emoji: "✨", nombre: "Pato Dorado",  desc: "+20 por click — bendición áurea",       precioBase: 12000, cps: 0,   cpc: 20 },
 ];
 
+<<<<<<< HEAD
 const comprados = {};
 const precios   = {};
 UPGRADES.forEach(u => {
     comprados[u.id] = parseInt(localStorage.getItem("comprado_" + u.id)) || 0;
     precios[u.id]   = parseInt(localStorage.getItem("precio_"   + u.id)) || u.precioBase;
+=======
+function actualizarBotones() {
+    btnLago.textContent    = `Comprar Lago (1 CPS) — Precio: ${precioLago}`;
+    btnPantano.textContent = `Comprar Pantano (5 CPS) — Precio: ${precioPantano}`;
+    btnRios.textContent    = `Comprar Ríos (10 CPS) — Precio: ${precioRios}`;
+    btnHumedales.textContent = `Comprar Humedales (50 CPS) — Precio: ${precioHumedales}`;
+}
+
+actualizarBotones();
+
+boton.addEventListener("click", () => {
+    clicks += clicksPorClick;
+    totalClicks.textContent = clicks;
+    localStorage.setItem("clicks", clicks);
+    localStorage.setItem("clicksPorClick", clicksPorClick);
+    soundCuack();
+>>>>>>> 626ad0365b9c211e912c3f3d5dabebe61897286c
 });
 
 // ─── LOGROS CONFIG ────────────────────────────────────────
@@ -219,6 +237,7 @@ setInterval(function() {
 let notifQueue  = [];
 let notifActiva = false;
 
+<<<<<<< HEAD
 function verificarLogros() {
     LOGROS.forEach(l => {
         if (!logrosDesbloqueados.includes(l.id) && l.check()) {
@@ -264,6 +283,75 @@ function renderLogros() {
 
 function actualizarContadorLogros() {
     logrosCount.textContent = logrosDesbloqueados.length;
+=======
+        clicksPorSegundo += 1;
+        cps.textContent = clicksPorSegundo;
+        localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
+
+        actualizarBotones();
+        soundCoind();
+    }
+}
+
+function comprarPantano() {
+    if (clicks >= precioPantano) {
+        clicks -= precioPantano;
+        totalClicks.textContent = clicks;
+        localStorage.setItem("clicks", clicks);
+
+        pantanosComprados++;
+        precioPantano = Math.floor(precioPantano * 1.15);
+        localStorage.setItem("pantanosComprados", pantanosComprados);
+        localStorage.setItem("precioPantano", precioPantano);
+
+        clicksPorSegundo += 5;
+        cps.textContent = clicksPorSegundo;
+        localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
+
+        actualizarBotones();
+        soundCoind();
+    }
+}
+
+function comprarRios() {
+    if (clicks >= precioRios) {
+        clicks -= precioRios;
+        totalClicks.textContent = clicks;
+        localStorage.setItem("clicks", clicks);
+
+        riosComprados++;
+        precioRios = Math.floor(precioRios * 1.15);
+        localStorage.setItem("riosComprados", riosComprados);
+        localStorage.setItem("precioRios", precioRios);
+
+        clicksPorSegundo += 10;
+        cps.textContent = clicksPorSegundo;
+        localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
+
+        actualizarBotones();
+        soundCoind();
+    }
+}
+
+function comprarHumedales() {
+    if (clicks >= precioHumedales) {
+        clicks -= precioHumedales;
+        totalClicks.textContent = clicks;
+        localStorage.setItem("clicks", clicks);
+
+        humedalesComprados++;
+        precioHumedales = Math.floor(precioHumedales * 1.15);
+        localStorage.setItem("humedalesComprados", humedalesComprados);
+        localStorage.setItem("precioHumedales", precioHumedales);
+
+        clicksPorSegundo += 50;
+        cps.textContent = clicksPorSegundo;
+        localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
+
+        actualizarBotones();
+        soundCoind();
+    }
+>>>>>>> 626ad0365b9c211e912c3f3d5dabebe61897286c
 }
 
 // Exponer toggleLogros globalmente para el onclick del HTML
@@ -296,6 +384,7 @@ window.resetGame = function() {
     renderLogros();
     actualizarContadorLogros();
     alert("Partida reseteada. ¡A empezar desde cero, pato!");
+<<<<<<< HEAD
 };
 
 // ─── GUARDAR ──────────────────────────────────────────────
@@ -325,3 +414,18 @@ renderLogros();
 actualizarContadorLogros();
 
 }); // fin DOMContentLoaded
+=======
+}
+
+function soundCuack() 
+{
+    const audio = new Audio('../ASSETS/cuack.mp3');
+    audio.play();
+}
+
+function soundCoind()
+{
+    const audio = new Audio('../ASSETS/coin.mp3');
+    audio.play();
+}
+>>>>>>> 626ad0365b9c211e912c3f3d5dabebe61897286c
