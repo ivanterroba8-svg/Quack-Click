@@ -103,3 +103,33 @@ function comprarCPS(cantidad) {
     cps.textContent = clicksPorSegundo;
     localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
 }
+
+function resetGame() {
+    const confirmado = confirm(
+        "⚠️ ¿Seguro que quieres resetear la partida?\n\n" +
+        "Se perderá todo:\n" +
+        `• ${clicks} clicks acumulados\n` +
+        `• ${clicksPorSegundo} CPS\n` +
+        `• ${lagosComprados} lagos, ${pantanosComprados} pantanos, ${riosComprados} ríos\n\n` +
+        "Esta acción no se puede deshacer."
+    );
+
+    if (!confirmado) return;
+    clicks = 0;
+    clicksPorClick = 1;
+    clicksPorSegundo = 0;
+    lagosComprados = 0;
+    pantanosComprados = 0;
+    riosComprados = 0;
+    precioLago = 100;
+    precioPantano = 500;
+    precioRios = 1000;
+
+    localStorage.clear();
+
+    totalClicks.textContent = clicks;
+    cps.textContent = clicksPorSegundo;
+    actualizarBotones();
+
+    alert("✅ Partida reseteada. ¡A empezar desde cero, pato!");
+}

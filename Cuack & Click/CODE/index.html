@@ -19,17 +19,24 @@
 
                 <h2>CPS:</h2>
                 <p id="cps">0</p>
+
+                <button class="reset-boton" onclick="resetGame()">🔄 Reset</button>
             </div>
 
             <div class="duck">
                 <button class="clicker" id="duckBtn"></button>
             </div>
 
+            
+
             <div class="buff">
                 <h2>Buffs:</h2>
-                <button class="buff-boton" id="btnLago" onclick="comprarLago()">Comprar Lago (1 CPS) — Precio: 100</button>
-                <button class="buff-boton" id="btnPantano" onclick="comprarPantano()">Comprar Pantano (5 CPS) — Precio: 500</button>
-                <button class="buff-boton" id="btnRios" onclick="comprarRios()">Comprar Ríos (10 CPS) — Precio: 1000</button>
+                <div class="buff-lista">
+                    <button class="buff-boton" id="btnLago" onclick="comprarLago()">Comprar Lago (1 CPS) — Precio: 100</button>
+                    <button class="buff-boton" id="btnPantano" onclick="comprarPantano()">Comprar Pantano (5 CPS) — Precio: 500</button>
+                    <button class="buff-boton" id="btnRios" onclick="comprarRios()">Comprar Ríos (10 CPS) — Precio: 1000</button>
+                    <button class="buff-boton" id="btnHumedales" onclick="comprarHumedales()">Comprar Humedales (25 CPS) — Precio: 2500</button>
+                </div>
             </div>
 
             <div class="food"></div>
