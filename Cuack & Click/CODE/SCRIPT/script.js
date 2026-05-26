@@ -8,7 +8,7 @@ let humedalesComprados = parseInt(localStorage.getItem("humedalesComprados")) ||
 let precioLago = parseInt(localStorage.getItem("precioLago")) || 100;
 let precioPantano = parseInt(localStorage.getItem("precioPantano")) || 500;
 let precioRios = parseInt(localStorage.getItem("precioRios")) || 1000;
-let precioHumedales = parseInt(localStorage.getItem("precioHumedales")) || 5000;
+let precioHumedales = parseInt(localStorage.getItem("precioHumedales")) || 2500;
 
 const boton = document.getElementById("duckBtn");
 const totalClicks = document.getElementById("totalClicks");
