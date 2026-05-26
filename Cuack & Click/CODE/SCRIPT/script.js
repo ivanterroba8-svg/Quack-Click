@@ -3,11 +3,11 @@ let clicksPorClick = parseInt(localStorage.getItem("clicksPorClick")) || 1;
 let clicksPorSegundo = parseInt(localStorage.getItem("clicksPorSegundo")) || 0;
 
 const boton = document.getElementById("duckBtn");
-const totalClcks = document.getElementById("totalClicks");
+const totalClicks = document.getElementById("totalClicks"); // ← estaba como "totalClcks"
 const cps = document.getElementById("cps");
 
-
 totalClicks.textContent = clicks;
+cps.textContent = clicksPorSegundo; // ← mostrar CPS inicial
 
 boton.addEventListener("click", () => {
     clicks += clicksPorClick;
@@ -16,12 +16,25 @@ boton.addEventListener("click", () => {
     localStorage.setItem("clicksPorClick", clicksPorClick);
 });
 
-function clicksSegundo()
+// ← setInterval para que se ejecute cada segundo
+setInterval(() => {
+    if (clicksPorSegundo > 0) {
+        clicks += clicksPorSegundo;
+        totalClicks.textContent = clicks;
+        localStorage.setItem("clicks", clicks);
+    }
+}, 1000);
+
+function comprarLago() 
 {
+    clicksPorSegundo += 1;
+    cps.textContent = clicksPorSegundo;
+    localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
+}
 
-};
-
-function comprarLago() {
-    clicksPorClick += 1;
-    localStorage.setItem("clicksPorSegundo", clicksPorClick);
+function comprarCPS(cantidad) 
+{
+    clicksPorSegundo += cantidad;
+    cps.textContent = clicksPorSegundo;
+    localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
 }
