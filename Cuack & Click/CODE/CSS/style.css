@@ -89,9 +89,11 @@ header h1 {
     width: 100%;
     max-width: 400px;
 
-    height: 230px;
+    height: auto;
+    min-height: 230px;
 
     border-radius: 25px;
+    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -113,6 +115,34 @@ header h1 {
     font-size: 3rem;
     font-weight: bold;
     color: #fffacd;
+}
+
+.reset-boton {
+    margin-top: 12px;
+    padding: 8px 20px;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fffacd;
+
+    background: linear-gradient(145deg, #b24444, #8c0404);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 15px rgba(0,0,0,0.3),
+        inset 0 -5px 7px rgba(0,0,0,0.2);
+
+    transition: 0.15s;
+}
+
+.reset-boton:hover {
+    transform: scale(1.05);
+}
+
+.reset-boton:active {
+    transform: scale(0.95);
 }
 
 /* DUCK */
@@ -177,6 +207,9 @@ header h1 {
 
     border-radius: 25px;
     padding: 20px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .buff::before {
@@ -203,6 +236,15 @@ header h1 {
         inset 0 -5px 7px rgba(0,0,0,0.2);
 
     transition: 0.15s;
+}
+
+.buff-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    max-height: calc(100% - 40px);
+    overflow-y: auto;
 }
 
 /* FOOD */
@@ -239,7 +281,8 @@ header h1 {
 @media (max-height: 820px) {
 
     .cuacks {
-        height: 170px;
+        height: auto;
+        min-height: 170px;
     }
 
     .cuacks h2 {
