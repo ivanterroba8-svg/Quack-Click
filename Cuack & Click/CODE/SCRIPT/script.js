@@ -4,9 +4,11 @@ let clicksPorSegundo = parseInt(localStorage.getItem("clicksPorSegundo")) || 0;
 let lagosComprados = parseInt(localStorage.getItem("lagosComprados")) || 0;
 let pantanosComprados = parseInt(localStorage.getItem("pantanosComprados")) || 0;
 let riosComprados = parseInt(localStorage.getItem("riosComprados")) || 0;
+let humedalesComprados = parseInt(localStorage.getItem("humedalesComprados")) || 0;
 let precioLago = parseInt(localStorage.getItem("precioLago")) || 100;
 let precioPantano = parseInt(localStorage.getItem("precioPantano")) || 500;
 let precioRios = parseInt(localStorage.getItem("precioRios")) || 1000;
+let precioHumedales = parseInt(localStorage.getItem("precioHumedales")) || 5000;
 
 const boton = document.getElementById("duckBtn");
 const totalClicks = document.getElementById("totalClicks");
@@ -14,6 +16,7 @@ const cps = document.getElementById("cps");
 const btnLago = document.getElementById("btnLago");
 const btnPantano = document.getElementById("btnPantano");
 const btnRios = document.getElementById("btnRios");
+const btnHumedales = document.getElementById("btnHumedales");
 
 totalClicks.textContent = clicks;
 cps.textContent = clicksPorSegundo;
@@ -22,6 +25,7 @@ function actualizarBotones() {
     btnLago.textContent    = `Comprar Lago (1 CPS) — Precio: ${precioLago}`;
     btnPantano.textContent = `Comprar Pantano (5 CPS) — Precio: ${precioPantano}`;
     btnRios.textContent    = `Comprar Ríos (10 CPS) — Precio: ${precioRios}`;
+    btnHumedales.textContent = `Comprar Humedales (50 CPS) — Precio: ${precioHumedales}`;
 }
 
 actualizarBotones();
@@ -91,6 +95,25 @@ function comprarRios() {
         localStorage.setItem("precioRios", precioRios);
 
         clicksPorSegundo += 10;
+        cps.textContent = clicksPorSegundo;
+        localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
+
+        actualizarBotones();
+    }
+}
+
+function comprarHumedales() {
+    if (clicks >= precioHumedales) {
+        clicks -= precioHumedales;
+        totalClicks.textContent = clicks;
+        localStorage.setItem("clicks", clicks);
+
+        humedalesComprados++;
+        precioHumedales = Math.floor(precioHumedales * 1.15);
+        localStorage.setItem("humedalesComprados", humedalesComprados);
+        localStorage.setItem("precioHumedales", precioHumedales);
+
+        clicksPorSegundo += 50;
         cps.textContent = clicksPorSegundo;
         localStorage.setItem("clicksPorSegundo", clicksPorSegundo);
 
