@@ -10,7 +10,9 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+
+    overflow: hidden;
+
     color: white;
 
     background-image: url('fondo.jpg');
@@ -18,6 +20,8 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+
+/* HEADER */
 
 header {
     width: calc(100% - 40px);
@@ -34,6 +38,7 @@ header {
     position: fixed;
     top: 20px;
     left: 50%;
+
     transform: translateX(-50%);
 
     border-radius: 25px;
@@ -49,12 +54,18 @@ header h1 {
     letter-spacing: 2px;
 }
 
+/* MAIN */
+
 .main {
     width: 100%;
     height: 100vh;
+
     position: relative;
+
     padding-top: 120px;
 }
+
+/* ESTILO GENERAL */
 
 .cuacks,
 .buff,
@@ -67,6 +78,8 @@ header h1 {
 
     backdrop-filter: blur(8px);
 }
+
+/* CUACKS */
 
 .cuacks {
     width: 18vw;
@@ -100,8 +113,11 @@ header h1 {
 .cuacks p {
     font-size: 3rem;
     font-weight: bold;
+
     color: #fffacd;
 }
+
+/* DUCK */
 
 .duck {
     width: 22vw;
@@ -113,6 +129,7 @@ header h1 {
     border-radius: 35px;
 
     position: absolute;
+
     left: 50%;
     top: 48%;
 
@@ -122,6 +139,8 @@ header h1 {
     align-items: center;
     justify-content: center;
 }
+
+/* BOTÓN */
 
 .clicker {
     width: 220px;
@@ -154,6 +173,8 @@ header h1 {
     transform: scale(0.95);
 }
 
+/* BUFFS */
+
 .buff {
     width: 18vw;
     min-width: 260px;
@@ -172,9 +193,12 @@ header h1 {
 
 .buff::before {
     content: "Buffs";
+
     font-size: 2rem;
     font-weight: bold;
 }
+
+/* FOOD */
 
 .food {
     width: 90%;
@@ -185,11 +209,14 @@ header h1 {
     border-radius: 25px;
 
     position: absolute;
+
     left: 50%;
     bottom: 20px;
 
     transform: translateX(-50%);
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 1200px) {
 
@@ -202,13 +229,36 @@ header h1 {
         width: 340px;
         height: 380px;
     }
+
+    .food {
+        bottom: 10px;
+    }
+}
+
+@media (max-height: 850px) {
+
+    .food {
+        height: 90px;
+    }
+
+    .buff {
+        height: 430px;
+    }
+
+    .duck {
+        height: 340px;
+    }
 }
 
 @media (max-width: 900px) {
 
+    body {
+        overflow-y: auto;
+    }
+
     .main {
         height: auto;
-        padding-bottom: 180px;
+        padding-bottom: 40px;
     }
 
     .cuacks,
@@ -233,13 +283,10 @@ header h1 {
     }
 
     .cuacks,
-    .buff {
-        width: 90%;
-        max-width: 400px;
-    }
-
+    .buff,
     .food {
         width: 90%;
+        max-width: 400px;
     }
 }
 
